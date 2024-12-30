@@ -1,0 +1,389 @@
+@font-face {
+  font-family: Sahel;
+  src: url("../fonts/Sahel.eot");
+  src: url("../fonts/Sahel.ttf") format("ttf"), url("../fonts/Sahel.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Nastaliq;
+  src: url("../fonts/IranNastaliq.ttf");
+  font-weight: normal;
+}
+.card-img, .card-overlay, .hamburger-menu .menu {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #262626;
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 10;
+}
+.hamburger-menu .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.hamburger-menu .menu-line {
+  width: 100%;
+  height: 4px;
+  background-color: #d3ab55;
+  transition: all 0.5s 0.5s;
+  transform-origin: right;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  width: 110px;
+  height: 110px;
+  border: 3px solid #d3ab55;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.main-name {
+  font-family: "Sahel", Tahoma;
+  font-size: 50px;
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sub-name {
+  font-family: "Sahel", Tahoma;
+  font-size: 18px;
+  color: #bbb;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-heading {
+  font-family: "Nastaliq", Tahoma;
+  font-size: 100px;
+  font-weight: 300;
+  color: #d3ab55;
+}
+@media (max-width: 1600px) {
+  .main-heading {
+    font-size: 80px;
+  }
+}
+
+.sub-heading {
+  font-family: "Sahel", Tahoma;
+  font-size: 60px;
+  font-weight: 1;
+  color: #bbb;
+  margin-bottom: 80px;
+  text-align: center;
+}
+@media (max-width: 1600px) {
+  .sub-heading {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 1300px) {
+  .sub-heading {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.main-btn {
+  width: 170px;
+  height: 45px;
+  font-family: "Sahel", Tahoma;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d3ab55;
+  background-color: transparent;
+  border: 1px solid #d3ab55;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.main-btn:hover {
+  background-color: #d3ab55;
+  color: #262626;
+}
+
+.card {
+  width: 33.3333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover .card-overlay {
+  left: 0;
+}
+.card-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  color: #fff;
+  background-color: rgba(211, 171, 85, 0.6);
+  z-index: 1;
+  transition: left 1s;
+}
+.card-overlay-heading {
+  font-family: "Nastaliq", Tahoma;
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card-overlay-paragraph {
+  font-family: "Sahel", Tahoma;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card-overlay-btn {
+  width: 150px;
+  height: 40px;
+  color: #d3ab55;
+  background-color: #fff;
+  font-family: "Sahel", Tahoma;
+  font-size: 14px;
+  border: 1px solid #d3ab55;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.card-img {
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1;
+}
+.navbar-navigation {
+  display: flex;
+}
+.navbar-navigation-left {
+  width: 50vw;
+  height: 100vh;
+  background-color: #262626;
+  position: fixed;
+  left: -50vw;
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+}
+.navbar-navigation-left .left-img {
+  width: 50%;
+  position: absolute;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
+  opacity: 0.7;
+  border-radius: 10px;
+}
+.navbar-navigation-left .left-img-1 {
+  top: 15%;
+  left: 15%;
+}
+.navbar-navigation-left .left-img-2 {
+  top: 35%;
+  left: 25%;
+}
+.navbar-navigation-left .left-img-3 {
+  top: 55%;
+  left: 35%;
+}
+.navbar-navigation-right {
+  width: 50vw;
+  height: 100vh;
+  background-color: #1f1d1d;
+  position: fixed;
+  right: -50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+}
+.navbar-navigation .nav-list-item {
+  list-style: none;
+}
+.navbar-navigation .nav-list-link {
+  font-family: "Sahel", Tahoma;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bbb;
+  text-decoration: none;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.5s;
+}
+.navbar-navigation .nav-list-link:hover {
+  color: #d3ab55;
+  letter-spacing: 4px;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+  transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+  transform: rotateZ(40deg);
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(../images/bg.jpeg) no-repeat center;
+  background-size: cover;
+}
+.header .brand {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: center;
+}
+.header-banner {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.about-us {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.about-us__left {
+  width: 40%;
+}
+.about-us__left img {
+  width: 100%;
+  opacity: 0.7;
+}
+.about-us__right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+.about-us__right .main-heading {
+  font-size: 60px;
+}
+.about-us__right .sub-heading {
+  font-size: 40px;
+}
+.about-us__right .stars {
+  margin: 3px 0;
+}
+.about-us__right .star {
+  font-size: 15px;
+  color: #d3ab55;
+  margin-left: 10px;
+}
+.about-us__right .description {
+  font-family: "Nastaliq", Tahoma;
+  color: #d3ab55;
+  font-size: 30px;
+  direction: rtl;
+  text-align: justify;
+}
+.about-us__right .description::first-letter {
+  padding-right: 30px;
+}
+@media (max-width: 1600px) {
+  .about-us__right .description {
+    font-size: 18px;
+  }
+}
+
+.gallery .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.footer .social-media {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+.footer .social-media-item {
+  list-style: none;
+}
+.footer .social-media-link {
+  text-decoration: none;
+  font-size: 50px;
+  color: #bbb;
+  transition: all 0.2s;
+}
+.footer .social-media-link:hover {
+  color: #d3ab55;
+}
+.footer-copyright-paragraph {
+  font-family: "Sahel", Tahoma;
+  font-size: 20px;
+  color: #bbb;
+  direction: rtl;
+}/*# sourceMappingURL=main.css.map */
